@@ -1,0 +1,25 @@
+[package]
+name = "tachyon"
+description = "Tachyon Download Manager — a native macOS download accelerator built with GPUI"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "tachyon"
+path = "src/main.rs"
+
+[dependencies]
+tachyon-engine.workspace = true
+gpui = "0.2.2"
+anyhow.workspace = true
+chrono.workspace = true
+log.workspace = true
+env_logger.workspace = true
+url.workspace = true
+unicode-segmentation = "1.12"
+objc = { version = "0.2", optional = true }
+
+[features]
+# Saves window PNGs on demand for visual checks; see src/snapshot.rs.
+dev-snapshots = ["dep:objc"]

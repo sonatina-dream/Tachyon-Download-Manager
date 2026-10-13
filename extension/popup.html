@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #1d1d1f;
+        --muted: #6b6b72;
+        --border: #e3e3e8;
+        --ok: #1f9d55;
+        --bad: #d93025;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1c1c1e;
+          --text: #f2f2f5;
+          --muted: #a0a0a8;
+          --border: #37373b;
+          --ok: #34c27a;
+          --bad: #ff5f57;
+        }
+      }
+      body {
+        margin: 0;
+        width: 300px;
+        background: var(--bg);
+        color: var(--text);
+        font: 13px -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+        font-weight: 600;
+      }
+      #status {
+        margin-left: auto;
+        font-weight: 400;
+        font-size: 12px;
+      }
+      main {
+        padding: 12px 14px;
+        display: grid;
+        gap: 10px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .field {
+        display: grid;
+        gap: 4px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        font: inherit;
+        color: var(--text);
+        background: transparent;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 5px 7px;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 54px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>⚡ Tachyon <span id="status">Checking…</span></header>
+    <main>
+      <label><input type="checkbox" id="takeOver" /> Take over browser downloads</label>
+      <div class="field">
+        File types to take over
+        <textarea id="extensions" spellcheck="false"></textarea>
+      </div>
+      <div class="field">
+        Tachyon port
+        <input type="number" id="port" min="1024" max="65535" />
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

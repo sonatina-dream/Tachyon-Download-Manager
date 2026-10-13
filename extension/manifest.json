@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Tachyon Download Manager Integration",
+  "short_name": "Tachyon",
+  "version": "0.1.0",
+  "description": "Send links and browser downloads to the Tachyon download accelerator for macOS.",
+  "permissions": ["contextMenus", "downloads", "cookies", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_title": "Tachyon",
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tachyon@localhost",
+      "strict_min_version": "121.0"
+    }
+  }
+}

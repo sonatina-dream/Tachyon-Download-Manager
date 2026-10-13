@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#shine)"/>
+  <!-- speed streaks -->
+  <g stroke="#ffffff" stroke-linecap="round" stroke-opacity="0.45" stroke-width="34">
+    <path d="M255 360 H385"/>
+    <path d="M215 470 H360"/>
+    <path d="M255 580 H345"/>
+  </g>
+  <!-- bolt -->
+  <path d="M560 210 L380 545 H505 L455 815 L690 450 H560 L625 210 Z" fill="#ffffff"/>
+  <!-- download tray -->
+  <path d="M300 760 V800 a40 40 0 0 0 40 40 H684 a40 40 0 0 0 40 -40 V760" fill="none" stroke="#ffffff" stroke-opacity="0.85" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
